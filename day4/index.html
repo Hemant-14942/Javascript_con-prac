@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Gallery</title>
+    <style>
+        nav {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: aquamarine;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .img-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Styling for Active Filter */
+        nav p {
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        nav p.active {
+            background-color: teal;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="tag">
+        <p data-category="all">All</p>
+        <p>Animal</p>
+        <p>Bird</p>
+    </nav>
+
+    <div class="img-container" id="imageGrid"></div>
+    <!-- without data-attribute  using -->
+    <!-- <script>
+        const arr = [
+            { name: "animal", img: "https://www.petfinder.com/wp-content/uploads/2020/09/A-cat-looking-up-at-a-tree-from-a-distance-632x474.jpg" },
+            { name: "animal", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-white-and-brown-Labrador-retriever-looking-up-to-the-camera-632x474.jpg" },
+            { name: "bird", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-brown-eagle-perched-on-a-branch-632x474.jpg" },
+            { name: "rabbit", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-white-and-brown-rabbit-looking-up-at-a-tree-from-a-distance-632x474.jpg" }
+        ];
+
+        const imageGrid = document.getElementById("imageGrid");
+        const tag = document.getElementById("tag");
+        let filter = "All";
+        tag.addEventListener("click",(event)=>{
+            console.log(event.target.textContent);
+            
+            tag.querySelectorAll("p").forEach(element => {
+                element.classList.remove("active");
+                // console.log(element.textContent);
+                if(event.target.textContent  ==element.textContent){
+                    element.classList.add("active");
+                    filter = event.target.textContent;
+                    console.log(filter);
+                }
+            });
+            
+            let filteredArray = arr.filter(item => item.name.toLowerCase() === filter.toLowerCase() || filter === "All");
+            display(filteredArray);
+        })
+        const display = (val)=>{
+            imageGrid.innerHTML=" ";
+            val.forEach(element => {
+                const img = document.createElement("img");
+                img.src = element.img;
+                img.alt = element.name;
+                imageGrid.appendChild(img);
+            });
+        }
+
+       
+    </script> -->
+     <script>
+             const arr = [
+                    { name: "animal", img: "https://www.petfinder.com/wp-content/uploads/2020/09/A-cat-looking-up-at-a-tree-from-a-distance-632x474.jpg" },
+                    { name: "animal", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-white-and-brown-Labrador-retriever-looking-up-to-the-camera-632x474.jpg" },
+                    { name: "bird", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-brown-eagle-perched-on-a-branch-632x474.jpg" },
+                    { name: "rabbit", img: "https://www.petfinder.com/wp-content/uploads/2019/12/A-white-and-brown-rabbit-looking-up-at-a-tree-from-a-distance-632x474.jpg" }
+                ];
+
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+body{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 10px 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: chartreuse;
+    color: brown;
+    transition: 1.3s ;
+    outline: none;
+}
+.btn:hover{
+    font-size:18px;
+    border-radius: 20px;
+    border-color: burlywood;
+    box-shadow: 4px 5px 2px  burlywood;
+    border-width: 2px;
+}

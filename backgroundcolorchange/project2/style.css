@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.container{
+    width: 400px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    margin-right: 400px;
+    background: linear-gradient(to right, #000428, #004e92);
+}
+.work
+{
+    display: flex;
+    gap:30px;
+}
+.worksub .worklist{
+    list-style:decimal;
+}
+
