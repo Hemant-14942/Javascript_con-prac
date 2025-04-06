@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        color: #343a40;
+    }
+</style>
+<body>
+    <div class="con">
+        <h1>Welcome to my website!</h1>
+    </div>
+    
+</body>
+<script>
+   let colorArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+   let n = colorArr.length;
+   let randomColor = "#";
+   for(let i = 0; i < 6; i++) {
+       randomColor += colorArr[Math.floor(Math.random() * n)];
+   }
+   document.querySelector("h1").textContent = randomColor;
+   document.body.style.backgroundColor = randomColor;
+   
+</script>
+</html>
